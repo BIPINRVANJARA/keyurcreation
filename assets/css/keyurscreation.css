@@ -606,3 +606,96 @@ html, body {
 .elementor-widget-tx_info_box:nth-child(5) .st-projects-2-item-single {
     background-image: url('../images/portfolio/portfolio-5.png') !important;
 }
+
+/* Mobile Responsiveness for Testimonials Section on Home Page */
+@media (max-width: 767px) {
+  .st-testimonial-2-area {
+    padding-top: 50px !important;
+    padding-bottom: 50px !important;
+    overflow: hidden !important;
+  }
+  
+  .st-testimonial-2-bg-camera {
+    display: none !important;
+  }
+  
+  .st-testimonial-2-slider {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+  
+  .st-testimonial-2-slider .swiper-wrapper .swiper-slide {
+    max-width: 100% !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  
+  .st-testimonial-2-slider-card {
+    height: auto !important;
+    min-height: 240px !important;
+    position: relative !important;
+    border-radius: 16px !important;
+    margin-bottom: 10px !important;
+  }
+  
+  .st-testimonial-2-slider-card .card-content {
+    position: relative !important;
+    inset: auto !important;
+    padding: 24px 20px !important;
+    border-radius: 16px !important;
+    background-color: #1A1A1A !important;
+    border: 1px solid rgba(201, 169, 98, 0.3) !important;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5) !important;
+    transform: none !important;
+    display: flex !important;
+    flex-direction: column !important;
+  }
+  
+  .st-testimonial-2-slider-card:hover .card-content {
+    transform: none !important;
+    filter: none !important;
+  }
+  
+  .st-testimonial-2-slider-card .author-name {
+    font-size: 18px !important;
+    color: #FAF7F2 !important;
+    margin-bottom: 2px !important;
+  }
+  
+  .st-testimonial-2-slider-card .author-bio {
+    font-size: 13px !important;
+    color: #C9A962 !important;
+    margin-bottom: 12px !important;
+  }
+  
+  .st-testimonial-2-slider-card .quote-icon {
+    margin-top: 0 !important;
+    margin-bottom: 12px !important;
+  }
+  
+  .st-testimonial-2-slider-card .quote-icon img {
+    max-width: 28px !important;
+    height: auto !important;
+    filter: invert(75%) sepia(20%) saturate(1000%) hue-rotate(5deg) brightness(95%) contrast(85%) !important;
+  }
+  
+  .st-testimonial-2-slider-card .comment {
+    font-size: 15px !important;
+    line-height: 1.5 !important;
+    color: #E0E0E0 !important;
+  }
+
+  .st-testimonial-2-sec-title {
+    margin-bottom: 30px !important;
+  }
+
+  .st-testimonial-2-sec-title .st-subtitle-2 {
+    font-size: 13px !important;
+  }
+
+  .st-testimonial-2-sec-title .st-sec-title-2 {
+    font-size: 24px !important;
+    line-height: 1.25 !important;
+    color: #FAF7F2 !important;
+  }
+}
