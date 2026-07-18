@@ -1,0 +1,608 @@
+/* Keyurscreation – Stories by Keyur | TSPF Brand Styles */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap');
+
+:root {
+    --kc-black: #0D0D0D;
+    --kc-ivory: #FAF7F2;
+    --kc-cream: #F5F0E8;
+    --kc-beige: #E8DFD0;
+    --kc-gold: #C9A962;
+    --kc-gold-dark: #8B6914;
+    --kc-gold-light: #E8D5A3;
+    --kc-white: #FFFFFF;
+    --tx-color-primary: #0D0D0D;
+    --tx-color-secondary: #C9A962;
+    --tx-color-accent: #8B6914;
+    --tx-color-highlight: #E8D5A3;
+    --kc-font-heading: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+    --kc-font-body: 'DM Sans', system-ui, sans-serif;
+    --kc-radius: 50px;
+    --kc-transition: 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Typography */
+.st-h-1, .st-h-2, .st-sec-title-2, .st-hero-2-title,
+.st-breadcrumb-title, .tx-title, h1, h2, h3, h4, h5, h6,
+.st-footer-2-area .big-title {
+    font-family: var(--kc-font-heading) !important;
+    letter-spacing: 0.02em;
+}
+
+body, .st-p-1, .st-p-2, p, li, a, span, input, textarea, select {
+    font-family: var(--kc-font-body) !important;
+}
+
+/* Buttons – gold border, rounded, hover glow */
+.st-pr-btn-2, .st-sd-btn-2, .st-h-2.card-btn, .st-active-btn-2 {
+    border-radius: var(--kc-radius) !important;
+    transition: all var(--kc-transition) !important;
+}
+
+.st-pr-btn-2 {
+    border: 1px solid var(--kc-gold) !important;
+    background: transparent !important;
+}
+
+.st-pr-btn-2:hover {
+    background: var(--kc-gold) !important;
+    color: var(--kc-black) !important;
+    box-shadow: 0 8px 32px rgba(201, 169, 98, 0.35);
+    transform: translateY(-2px);
+}
+
+.st-pr-btn-2 .text { color: inherit; }
+
+.st-sd-btn-2 .btn-border {
+    border: 1px solid rgba(201, 169, 98, 0.5) !important;
+    border-radius: var(--kc-radius) !important;
+    backdrop-filter: blur(12px);
+    background: rgba(255, 255, 255, 0.06) !important;
+}
+
+.st-sd-btn-2:hover .btn-border {
+    border-color: var(--kc-gold) !important;
+    background: rgba(201, 169, 98, 0.12) !important;
+}
+
+.st-h-2.card-btn {
+    border: 1px solid var(--kc-gold) !important;
+    border-radius: var(--kc-radius) !important;
+}
+
+.st-h-2.card-btn:hover {
+    background: var(--kc-gold) !important;
+    color: var(--kc-black) !important;
+}
+
+/* Image hover – zoom + fade */
+.wa-img-cover img,
+.st-hero-2-slider-item .img-elm img,
+.st-about-2-img-single img,
+.st-services-2-item-img-single img,
+.st-projects-2-item-single,
+.kc-film-card img {
+    transition: transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94), opacity 0.5s ease !important;
+}
+
+.wa-img-cover:hover img,
+.st-hero-2-slider-item:hover .img-elm img,
+.st-about-2-img-single:hover img,
+.st-services-2-item-img-single:hover img,
+.kc-film-card:hover img {
+    transform: scale(1.06);
+    opacity: 0.92;
+}
+
+/* Section spacing rhythm – exclude header/footer and hero sections from global top padding */
+.tx-section:not(.tx-header):not(.st-header-2-area):not(.st-header-1-area):not(.st-hero-2-area):not(.st-hero-1-area) {
+    padding-top: 100px !important;
+    padding-bottom: 100px !important;
+}
+
+.st-hero-2-area,
+.st-hero-1-area {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+}
+
+.st-home-2-bg-color {
+    background-color: var(--kc-ivory) !important;
+}
+
+/* Gold accents */
+.st-subtitle-2 .text,
+.has-clr,
+.st-price-2-card.active .title {
+    color: var(--kc-gold) !important;
+}
+
+.st-subtitle-2 .line-1,
+.st-subtitle-2 .line-2,
+.st-subtitle-2 .line-3,
+.st-subtitle-2 .line-4 {
+    background: var(--kc-gold) !important;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Header – transparent over hero, compact, no top white gap */
+.st-header-1-area.tx-section,
+.st-header-2-area.tx-section,
+.tx-header.tx-section,
+.st-header-1-area,
+.st-header-2-area {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    background: transparent !important;
+    backdrop-filter: none !important;
+    top: 0 !important;
+}
+
+.wa_sticky_header:is(.st-header-1-area),
+.wa_sticky_header:is(.st-header-2-area) {
+    top: 0 !important;
+    background: transparent !important;
+}
+
+.wa_sticky_header:is(.st-header-1-area):is(.wa_sticky_show),
+.wa_sticky_header:is(.st-header-2-area):is(.wa_sticky_show) {
+    background: rgba(13, 13, 13, 0.75) !important;
+    backdrop-filter: blur(12px) !important;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.12);
+    padding: 6px 0 !important;
+}
+
+.st-header-2-wrap {
+    padding-top: 8px !important;
+    padding-bottom: 8px !important;
+}
+
+/* Remove dark block and dashed border line entirely */
+.st-header-2-wrap::after {
+    display: none !important;
+}
+
+/* Fix header nav layout: center nav, push button right, clear logo gap */
+@media only screen and (min-width: 1200px) {
+  .st-main-navigation.has-header-2 {
+    position: absolute !important;
+    left: 0 !important;
+    right: 0 !important;
+    margin: 0 auto !important;
+    width: max-content !important;
+    z-index: 2 !important;
+  }
+  .st-main-navigation:is(.has-header-2) .navbar-nav li:nth-child(3) {
+    margin-right: 170px !important;
+  }
+  .st-main-navigation:is(.has-header-2) .navbar-nav li:nth-child(4) {
+    margin-right: 0 !important;
+  }
+  .st-main-navigation:is(.has-header-2) .navbar-nav li:nth-child(5) {
+    margin-right: 120px !important;
+  }
+  .st-header-2-action-link {
+    margin-left: auto !important;
+  }
+}
+
+/* Nav links readable on hero imagery */
+.st-main-navigation:is(.has-header-2) .navbar-nav li a {
+    color: var(--kc-white) !important;
+    text-shadow: 0 1px 6px rgba(0, 0, 0, 0.45);
+    font-weight: 500;
+}
+
+.st-main-navigation:is(.has-header-2) .navbar-nav li:hover > a,
+.st-main-navigation:is(.has-header-2) .navbar-nav li.current-menu-item > a,
+.st-main-navigation:is(.has-header-2) .navbar-nav li.current_page_item > a {
+    color: var(--kc-gold) !important;
+}
+
+.st-main-navigation:is(.has-header-2) .navbar-nav li:is(.dropdown) > a::before {
+    color: var(--kc-gold) !important;
+}
+
+.st-header-1-area {
+    backdrop-filter: blur(12px);
+}
+
+/* Footer */
+.st-footer-2-area {
+    background-color: var(--kc-black) !important;
+}
+
+.st-footer-2-area .big-title {
+    color: var(--kc-gold) !important;
+    opacity: 0.15;
+}
+
+/* Preloader */
+.st-preloader {
+    background: var(--kc-black) !important;
+}
+
+.st-preloader-footer {
+    color: var(--kc-gold) !important;
+    letter-spacing: 4px;
+}
+
+/* Breadcrumb */
+.st-breadcrumb-area {
+    background-color: var(--kc-black) !important;
+}
+
+/* Pricing cards glass effect */
+.st-price-2-card {
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(201, 169, 98, 0.15) !important;
+    border-radius: 16px !important;
+}
+
+.st-price-2-card.active {
+    border-color: var(--kc-gold) !important;
+    box-shadow: 0 16px 48px rgba(201, 169, 98, 0.2);
+}
+
+/* Testimonial stars */
+.st-testimonial-2-rating i,
+.fa-star { color: var(--kc-gold) !important; }
+
+/* Custom: Featured Wedding Films */
+.kc-films-area {
+    background: var(--kc-black);
+    padding: 100px 0;
+}
+
+.kc-films-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 48px;
+}
+
+.kc-film-card {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    aspect-ratio: 16/10;
+    cursor: pointer;
+}
+
+.kc-film-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.kc-film-card .kc-film-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, transparent 60%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 24px;
+    transition: background var(--kc-transition);
+}
+
+.kc-film-card:hover .kc-film-overlay {
+    background: linear-gradient(to top, rgba(201,169,98,0.4) 0%, rgba(0,0,0,0.6) 100%);
+}
+
+.kc-film-card .kc-play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 56px;
+    height: 56px;
+    border: 2px solid var(--kc-gold);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--kc-gold);
+    font-size: 18px;
+    opacity: 0;
+    transition: opacity var(--kc-transition);
+}
+
+.kc-film-card:hover .kc-play { opacity: 1; }
+
+.kc-film-card h4 {
+    color: var(--kc-white);
+    font-family: var(--kc-font-heading);
+    font-size: 1.25rem;
+    margin: 0;
+}
+
+.kc-film-card p {
+    color: var(--kc-beige);
+    font-size: 0.85rem;
+    margin: 4px 0 0;
+}
+
+/* Nav gold hover */
+.st-main-navigation a:hover,
+.st-footer-2-menu a:hover {
+    color: var(--kc-gold) !important;
+}
+
+/* Animation timing tweak */
+.wow {
+    animation-duration: 0.9s !important;
+}
+
+/* Section divider */
+.kc-divider {
+    width: 60px;
+    height: 1px;
+    background: var(--kc-gold);
+    margin: 0 auto 24px;
+}
+
+/* Responsive films grid */
+@media (max-width: 991px) {
+    .kc-films-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 575px) {
+    .kc-films-grid { grid-template-columns: 1fr; }
+}
+
+/* Dollar to Rupee symbol */
+.price-elm .dollar-sing::after { content: '₹'; }
+.price-elm .dollar-sing { font-size: 0; }
+.price-elm .dollar-sing::after { font-size: 1.5rem; }
+
+/* Projects section – readable text on light backgrounds (missing bg images) */
+.st-projects-2-area {
+    background-color: var(--kc-cream);
+}
+
+.st-projects-2-item-single::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(13, 13, 13, 0.72) 0%, rgba(13, 13, 13, 0.45) 100%);
+    z-index: 0;
+    pointer-events: none;
+}
+
+.st-projects-2-item-single .content-wrap {
+    position: relative;
+    z-index: 1;
+}
+
+.st-projects-2-item-single .title,
+.st-projects-2-item-single .title a {
+    color: var(--kc-white) !important;
+}
+
+.st-projects-2-item-single .title:hover,
+.st-projects-2-item-single .title a:hover {
+    color: var(--kc-gold) !important;
+}
+
+.st-projects-2-item-single .tags-list li {
+    background: rgba(255, 255, 255, 0.18) !important;
+    color: var(--kc-white) !important;
+    border: 1px solid rgba(201, 169, 98, 0.35);
+}
+
+.st-projects-2-item-single .st-pr-btn-2 {
+    color: var(--kc-white) !important;
+}
+
+.st-projects-2-item-single .st-pr-btn-2 .text {
+    border: 1px solid var(--kc-gold) !important;
+    background: transparent !important;
+    color: var(--kc-white) !important;
+}
+
+.st-projects-2-item-single .st-pr-btn-2 .icon,
+.st-projects-2-item-single .st-pr-btn-2 .icon-2 {
+    background-color: var(--kc-gold) !important;
+}
+
+.st-projects-2-item-single .st-pr-btn-2 .icon .icon-box,
+.st-projects-2-item-single .st-pr-btn-2 .icon-2 .icon-box {
+    background-color: var(--kc-black) !important;
+}
+
+.st-projects-2-item-single .st-pr-btn-2:hover .text {
+    background-color: var(--kc-gold) !important;
+    color: var(--kc-black) !important;
+    border-color: var(--kc-gold) !important;
+}
+
+/* Fallback when portfolio background images are missing */
+.st-projects-2-item-single.wa-bg-default {
+    background-color: var(--kc-black);
+    background-size: cover;
+    background-position: center;
+}
+
+/* Header 1 logo visibility tweak */
+.st-header-1-logo {
+  max-width: 80px !important;
+}
+
+/* Header logo + CTA button brand styling */
+.st-header-2-logo .logo-elm {
+  box-shadow: inset 0px 0px 14px var(--kc-gold) !important;
+  background: var(--kc-black) !important;
+}
+.st-header-2-logo {
+  border-color: rgba(201, 169, 98, 0.4) !important;
+}
+.st-header-2-action-link .st-pr-btn-2 {
+  color: var(--kc-white) !important;
+}
+.st-header-2-action-link .st-pr-btn-2 .icon .icon-box,
+.st-header-2-action-link .st-pr-btn-2 .icon-2 .icon-box {
+  box-shadow: inset 0px 0px 8px var(--kc-gold) !important;
+  background: var(--kc-black) !important;
+}
+.st-header-2-action-link .st-pr-btn-2 .icon,
+.st-header-2-action-link .st-pr-btn-2 .icon-2 {
+  background: var(--kc-gold) !important;
+}
+.st-header-2-action-link .st-pr-btn-2 .text {
+  background-color: rgba(13, 13, 13, 0.55) !important;
+  border: 1px solid var(--kc-gold) !important;
+  color: var(--kc-white) !important;
+}
+.st-header-2-action-link .st-pr-btn-2:hover .text {
+  background-color: var(--kc-gold) !important;
+  color: var(--kc-black) !important;
+}
+
+/* Lens Image Aspect Ratio & Circular Mask Fix */
+.st-process-2-lens-man,
+.st-testimonial-3-lens-man,
+.st-choose-1-bg-lens {
+    aspect-ratio: 1 / 1 !important;
+    border-radius: 50% !important;
+    overflow: hidden !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.st-process-2-lens-man img,
+.st-process-2-lens-man .swiper-slide img,
+.st-testimonial-3-lens-man img,
+.st-testimonial-3-lens-man .swiper-slide img,
+.st-choose-1-bg-lens img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center !important;
+    border-radius: 50% !important;
+    aspect-ratio: 1 / 1 !important;
+}
+
+.st-process-2-lens-man .swiper-wrapper,
+.st-process-2-lens-man .swiper-slide,
+.st-testimonial-3-lens-man .swiper-wrapper,
+.st-testimonial-3-lens-man .swiper-slide {
+    height: 100% !important;
+    width: 100% !important;
+    border-radius: 50% !important;
+    overflow: hidden !important;
+}
+
+/* Feature & Magnifier Card Image Cover Fix */
+.wa_magnifier_lens,
+.st-services-2-item-img-single,
+.st-about-2-img-single,
+.st-hero-2-slider-item .img-elm {
+    overflow: hidden !important;
+}
+
+.wa_magnifier_lens img,
+.st-services-2-item-img-single img,
+.st-about-2-img-single img,
+.st-hero-2-slider-item .img-elm img {
+    object-fit: cover !important;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+/* Testimonial avatar pictures hidden */
+.card-author-img,
+.st-testimonial-2-slider-card .card-img,
+.st-testimonial-3-card .card-author-img,
+.st-testimonial-4-card .main-img,
+.card-author img,
+.st-testimonial-3-card .img-elm {
+    display: none !important;
+}
+
+/* Adjust padding when avatar image is removed */
+.st-testimonial-3-card .card-author,
+.st-testimonial-2-slider-card .card-content {
+    padding-left: 0 !important;
+}
+
+/* Instagram Marquee Handle Replacement: Replace @snapture image with @keyurscreation_ badge */
+.st-gallery-1-slider-item .logo-img {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 8px !important;
+    background: rgba(13, 13, 13, 0.75) !important;
+    backdrop-filter: blur(10px) !important;
+    -webkit-backdrop-filter: blur(10px) !important;
+    padding: 8px 18px !important;
+    border-radius: 30px !important;
+    border: 1px solid rgba(201, 169, 98, 0.5) !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4) !important;
+    text-decoration: none !important;
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    z-index: 5 !important;
+    transition: all 0.3s ease !important;
+}
+
+.st-gallery-1-slider-item .logo-img:hover {
+    background: #C9A962 !important;
+    border-color: #ffffff !important;
+    transform: translate(-50%, -50%) scale(1.05) !important;
+}
+
+.st-gallery-1-slider-item .logo-img img {
+    display: none !important;
+}
+
+.st-gallery-1-slider-item .logo-img::before {
+    content: "\f16d" !important;
+    font-family: "Font Awesome 6 Brands", "Font Awesome 5 Brands" !important;
+    font-weight: 400 !important;
+    font-size: 18px !important;
+    color: #ffffff !important;
+}
+
+.st-gallery-1-slider-item .logo-img::after {
+    content: "@keyurscreation_" !important;
+    color: #ffffff !important;
+    font-family: 'DM Sans', sans-serif !important;
+    font-size: 15px !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.5px !important;
+}
+
+/* Portfolio Card Indian Background Image Guarantees */
+.st-projects-2-item-single {
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+    min-height: 480px !important;
+}
+
+.elementor-widget-tx_info_box:nth-child(1) .st-projects-2-item-single {
+    background-image: url('../images/portfolio/portfolio-1.png') !important;
+}
+
+.elementor-widget-tx_info_box:nth-child(2) .st-projects-2-item-single {
+    background-image: url('../images/portfolio/portfolio-2.png') !important;
+}
+
+.elementor-widget-tx_info_box:nth-child(3) .st-projects-2-item-single {
+    background-image: url('../images/portfolio/portfolio-3.png') !important;
+}
+
+.elementor-widget-tx_info_box:nth-child(4) .st-projects-2-item-single {
+    background-image: url('../images/portfolio/portfolio-4.png') !important;
+}
+
+.elementor-widget-tx_info_box:nth-child(5) .st-projects-2-item-single {
+    background-image: url('../images/portfolio/portfolio-5.png') !important;
+}
